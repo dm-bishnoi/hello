@@ -1,0 +1,46 @@
+<style>
+  .colorChange{
+    color: white;
+  }
+  
+   .bgColor{
+     background-color: black;
+   }
+   .cssColor{
+     color: yellow;
+   }
+</style>
+
+<div class="container">
+  <form #form>
+    <div><br>
+      <span style="font-size: 25px"> First Name </span>
+      <input type="text"  name="fname" class="form-control" placeholder="Enter your first name" #fname>
+    </div>
+    
+    <br>
+    
+      
+        <div><br>
+          <span style="font-size: 25px"> Last Name </span>
+          <input type="text"  name="lname" class="form-control" placeholder="Enter your last name" #lname>
+        </div>
+
+
+
+    <div><br>
+      <span style="font-size: 25px"> Email </span>
+      <input type="email" name="email" class="form-control" placeholder="Email">
+    </div>
+
+    <div><br>
+      <span  style="font-size: 25px">Password:</span>
+        <input type="password" class="form-control" name="psw" placeholder="Password">
+    </div>
+
+    <br>
+    <button type="button" class="btn btn-outline-info"  style="font-size: 25px" (click)="getEmail(form)">Submit</button>
+  </form>
+</div>
+
+

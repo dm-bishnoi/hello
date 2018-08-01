@@ -1,0 +1,53 @@
+<style>
+.nav-link:hover{
+  background-color: black;
+  
+}
+.bg-dark{
+  
+  padding: 0px;
+}
+.form-inline{
+  margin-left: 720px
+}
+
+
+</style>
+
+
+<div class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item" >
+      <a class="nav-link" routerLink = "sport" active><h4>Sports Car</h4></a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink = "wildlife"><h4>Wildlife</h4></a>
+    </li>
+</ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink = "login"><h4>Login</h4></a>
+      </li>
+  </ul>
+
+
+<ul class="navbar-nav">
+  <li class="nav-item">
+    <a class="nav-link" routerLink = "practice"><h4>Practice</h4></a>
+  </li>
+</ul>
+
+  
+  <!-- <form class="form-inline">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form> -->
+
+</div>
+
+<router-outlet></router-outlet>
+
+  

@@ -1,0 +1,92 @@
+<style>
+  .colorChange{
+    color: white
+  }
+  .bgColor{
+    background-color: red;
+  }
+  .singleCss{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 40px;
+    text-align: center;
+  }
+</style>
+
+<input type="text" name="" [value]="log">
+
+<div [hidden]="isHidden">
+  This property bind check.
+</div>
+
+<br><br>
+<button class="btn btn-outline-info" (click)="myfun($event)" value='Dharmender Bishnoi'>Check event binding</button>
+
+<br><br>
+  <button class="btn btn-danger"[class.active]='isActive'>Class Binding</button>
+
+<br><br>
+  <button class="btn btn-primary" [class]='multi'>cssClasses Binding </button>
+
+<br><br>
+  <button class="btn btn-primary" [class.cssColor]='cssChange'>Css Binding color</button>
+
+<br><br>
+  <button [style.color]="inlineColor ? 'red' : green ">Inline Style Binding</button>
+
+<br><br>
+  <input type="text" class="form-control" #email >
+  <button (click)="getEmail(email.value)">Submit</button>
+
+  <br><br>
+  <div class="container">
+<br>
+    <input [(ngModel)]='email1' (click) = 'getEmail1()'>
+
+  </div>
+<br>
+  <div [ngClass]=" multiColor ">
+    Welcome to INDIA.....
+  </div>
+  <br><br><br>
+  <h2>NgIf Condition</h2>
+  <br>
+  
+  <div *ngIf=" names === 'Bishnoi' else elsepart  ">
+    Hello friend welcome in class...
+    <br>
+    You are friendship,
+    <br>
+    Welcome by {{names}}. 
+
+  </div>
+  <ng-template #elsepart>
+    Thanks a lots
+
+  </ng-template>
+  <br><br>
+  <h2>ngSwitch</h2>
+    <div [ngSwitch]="favColor">
+      <div *ngSwitchCase="'red'">
+        This my fav color is {{favColor}}.
+      </div>
+      <div *ngSwitchCase="'green'">
+        This my fav color is {{favColor}}.
+      </div>
+      <div *ngSwitchCase="'blue'">
+        This my fav color is {{favColor}}.
+      </div>
+      <div *ngSwitchDfault>
+        No my fav color.....
+      </div>
+
+  </div>
+  <br><br>
+  <div *ngFor = "let col of colors">
+      {{col}}
+  </div>
+  <br>
+  <div *ngFor = "let bio of biodata">
+      {{bio.id}} {{bio.name}}
+  </div>
+<div>fjefla</div>
